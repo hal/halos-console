@@ -47,8 +47,8 @@ git pull --rebase upstream main
 
 ## Discuss your planned changes (if you want feedback)
 
-* Issue Tracker - https://issues.jboss.org/browse/HAL
-* Chat - https://wildfly.zulipchat.com/#narrow/stream/174373-hal
+- Issue Tracker - https://issues.jboss.org/browse/HAL
+- Chat - https://wildfly.zulipchat.com/#narrow/stream/174373-hal
 
 ## Create a simple topic branch to isolate your work (recommended)
 
@@ -58,7 +58,7 @@ git checkout -b my_cool_feature
 
 ## Make the changes
 
-Make whatever code changes, including new tests to verify your change, are necessary and ensure that the build and tests pass. Make sure your code changes apply to the rules defined by Prettier and ESLint. You should run 
+Make whatever code changes, including new tests to verify your change, are necessary and ensure that the build and tests pass. Make sure your code changes apply to the rules defined by Prettier and ESLint. You should run
 
 ```shell
 npm run format && npm run lint
@@ -66,7 +66,7 @@ npm run format && npm run lint
 
 before submitting your changes.
 
-To build the project run 
+To build the project run
 
 ```bash
 npm run build
@@ -102,16 +102,16 @@ git push origin my_cool_feature
 
 Now your updates are in your GitHub repo, you will need to notify the project that you have code/docs for inclusion.
 
-* Send a pull request, by clicking the pull request link while in your repository fork
-* After review a maintainer will merge your pull request, update/resolve associated issues, and reply when complete
-* Lastly, switch back to branch main from your topic branch and pull the updates
+- Send a pull request, by clicking the pull request link while in your repository fork
+- After review a maintainer will merge your pull request, update/resolve associated issues, and reply when complete
+- Lastly, switch back to branch main from your topic branch and pull the updates
 
 ```bash
 git checkout main
 git pull upstream main
 ```
 
-* You may also choose to update your origin on GitHub as well
+- You may also choose to update your origin on GitHub as well
 
 ```bash
 git push origin
@@ -121,5 +121,5 @@ git push origin
 
 Here are some tips on increasing the chance that your pull request is accepted:
 
-* Write a [good commit message](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
-* Include tests that fail without your code, and pass with it
+- Write a [good commit message](https://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+- Include tests that fail without your code, and pass with it

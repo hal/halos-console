@@ -14,10 +14,10 @@ export default defineConfig({
       },
     },
   },
-
-  server: {
-    hmr: {
-      port: 5173
-    }
-  }
+  //
+  // server: {
+  //   hmr: {
+  //     port: 5173,
+  //   },
+  // },
 });
