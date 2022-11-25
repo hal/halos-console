@@ -20,6 +20,7 @@ jobs:
         with:
           node-version: 18
           cache: 'npm'
+      - run: npm install
       - run: npm run format
       - run: npm run lint
       - run: npm run build
