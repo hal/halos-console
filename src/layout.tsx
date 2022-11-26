@@ -26,8 +26,8 @@ import { BarsIcon, BellIcon, CogIcon, HelpIcon, QuestionCircleIcon } from '@patt
 import React, { FunctionComponent, ReactNode } from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
-import logoPng from '../assets/halos-logo.png';
-import logoSvg from '../assets/halos-logo.svg';
+import logoPng from '~/assets/halos-logo.png';
+import logoSvg from '~/assets/halos-logo.svg';
 
 interface LayoutProps {
   children: ReactNode;

@@ -2,8 +2,9 @@ import { EmptyState, EmptyStateBody, EmptyStateIcon, PageSection, Title } from '
 import { ExclamationTriangleIcon } from '@patternfly/react-icons';
 import { isRouteErrorResponse, useRouteError } from 'react-router-dom';
 
-import GoHome from '../components/gohome';
-import Layout from './layout';
+import GoHome from '~/components/gohome';
+
+import Layout from '../layout';
 
 const Error = () => {
   const error = useRouteError();

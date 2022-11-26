@@ -3,16 +3,16 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
-import Deployment from './routes/deployment';
-import Error from './routes/error';
-import Help from './routes/help';
-import ModelBrowser from './routes/modelbrowser';
-import NotYetImplemented from './routes/nyi';
-import Root from './routes/root';
-import Server from './routes/server';
-import Welcome from './routes/welcome';
+import Deployment from '~/routes/deployment';
+import Error from '~/routes/error';
+import Help from '~/routes/help';
+import ModelBrowser from '~/routes/modelbrowser';
+import NotYetImplemented from '~/routes/nyi';
+import Server from '~/routes/server';
+import Welcome from '~/routes/welcome';
+import '~/styles/main.css';
 
-import './main.css';
+import Root from './root';
 
 const router = createBrowserRouter(
   createRoutesFromElements(

@@ -2,10 +2,11 @@
 import react from '@vitejs/plugin-react';
 import { resolve } from 'path';
 import { defineConfig } from 'vite';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
-  plugins: [react()],
+  plugins: [tsconfigPaths(), react()],
 
   build: {
     rollupOptions: {
@@ -14,10 +15,11 @@ export default defineConfig({
       },
     },
   },
-  //
-  // server: {
-  //   hmr: {
-  //     port: 5173,
-  //   },
-  // },
+
+  server: {
+    hmr: {
+      host: 'localhost',
+      port: 5173,
+    },
+  },
 });
