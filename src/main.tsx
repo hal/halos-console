@@ -3,12 +3,12 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 
-import Deployment from '~/routes/deployment';
+import Deployment, { deploymentsLoader } from '~/routes/deployment';
 import Error from '~/routes/error';
 import Help from '~/routes/help';
 import ModelBrowser from '~/routes/modelbrowser';
 import NotYetImplemented from '~/routes/nyi';
-import Server from '~/routes/server';
+import Server, { serversLoader } from '~/routes/server';
 import Welcome from '~/routes/welcome';
 import '~/styles/main.css';
 
@@ -18,8 +18,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<Root />} path='/' errorElement={<Error />}>
       <Route path='/' element={<Welcome />} />
-      <Route path='server' element={<Server />} />
-      <Route path='deployment' element={<Deployment />} />
+      <Route path='server' element={<Server />} loader={serversLoader} />
+      <Route path='deployment' element={<Deployment />} loader={deploymentsLoader} />
       <Route path='modelbrowser' element={<ModelBrowser />} />
       <Route path='help' element={<Help />} />
       <Route path='nyi' element={<NotYetImplemented />} />

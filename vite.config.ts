@@ -17,9 +17,8 @@ export default defineConfig({
   },
 
   server: {
-    hmr: {
-      host: 'localhost',
-      port: 5173,
+    proxy: {
+      '/api': 'http://127.0.0.1:8080',
     },
   },
 });
