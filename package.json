@@ -24,7 +24,7 @@
     "@patternfly/react-styles": "^4.91.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.4.5"
+    "react-router-dom": "^6.5.0"
   },
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.15.0",
