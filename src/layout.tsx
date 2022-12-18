@@ -120,8 +120,8 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
   const pageNav = (
     <Nav>
       <NavList>
-        <NavItem key={'server'} isActive={location.pathname == 'server'}>
-          <NavLink to={'server'}>Server</NavLink>
+        <NavItem key={'services'} isActive={location.pathname == 'services'}>
+          <NavLink to={'services'}>Services</NavLink>
         </NavItem>
         <NavItem key={'deployment'} isActive={location.pathname == 'deployment'}>
           <NavLink to={'deployment'}>Deployment</NavLink>

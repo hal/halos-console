@@ -8,7 +8,7 @@ import Error from '~/routes/error';
 import Help from '~/routes/help';
 import ModelBrowser from '~/routes/modelbrowser';
 import NotYetImplemented from '~/routes/nyi';
-import Server, { serversLoader } from '~/routes/server';
+import Service, { servicesLoader } from '~/routes/services';
 import Welcome from '~/routes/welcome';
 import '~/styles/main.css';
 
@@ -18,7 +18,7 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<Root />} path='/' errorElement={<Error />}>
       <Route path='/' element={<Welcome />} />
-      <Route path='server' element={<Server />} loader={serversLoader} />
+      <Route path='services' element={<Service />} loader={servicesLoader} />
       <Route path='deployment' element={<Deployment />} loader={deploymentsLoader} />
       <Route path='modelbrowser' element={<ModelBrowser />} />
       <Route path='help' element={<Help />} />
