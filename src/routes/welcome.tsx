@@ -4,7 +4,7 @@ const Welcome = () => (
   <PageSection variant={PageSectionVariants.light}>
     <TextContent>
       <Text component={TextVariants.h1}>halOS</Text>
-      <Text component={TextVariants.p}>Welcom to halOS</Text>
+      <Text component={TextVariants.p}>Welcome to halOS</Text>
     </TextContent>
   </PageSection>
 );
