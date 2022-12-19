@@ -17,7 +17,7 @@ const WildFlyServerComponent = () => {
         {servers.map((server, i) => (
           <GalleryItem key={i}>
             <Card>
-              <CardBody>{server.serverName}</CardBody>
+              <CardBody>{server.name}</CardBody>
             </Card>
           </GalleryItem>
         ))}
