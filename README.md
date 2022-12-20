@@ -22,12 +22,13 @@ This repository contains the console. The console is a [RIA](https://en.wikipedi
 ## Build
 
 ```shell
+npm install
 npm run build
 ```
 
 ## Development
 
-Before starting the console in dev mode, make sure to start the [proxy](https://github.com/hal/halos-proxy) in [dev mode](https://github.com/hal/halos-proxy#development) as well. Then run the proxy in dev mode, using
+Before starting the console in dev mode, make sure to start the [proxy](https://github.com/hal/halos-proxy) in [dev mode](https://github.com/hal/halos-proxy#development) as well. Then start the proxy in dev mode, using
 
 ```shell
 npm run dev
