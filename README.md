@@ -11,7 +11,7 @@ halOS consists of two parts:
 1. [Proxy](https://github.com/hal/halos-proxy) (back-end)
 2. Console (front-end, this repository)
 
-This repository contains the console. The console is a [RIA](https://en.wikipedia.org/wiki/Rich_web_application) / [SPA](https://en.wikipedia.org/wiki/Single-page_application) following the design guidelines from [PatternFly](https://www.patternfly.org/v4/). It uses the REST API exposed by the [proxy](https://github.com/hal/halos-proxy).
+This repository contains the console. The console is a [RIA](https://en.wikipedia.org/wiki/Rich_web_application) / [SPA](https://en.wikipedia.org/wiki/Single-page_application) following the design guidelines from [PatternFly](https://www.patternfly.org/v4/). It consumes the REST API exposed by the [proxy](https://github.com/hal/halos-proxy).
 
 ## Technical Stack
 
