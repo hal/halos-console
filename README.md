@@ -1,6 +1,6 @@
 # halOS Console
 
-halOS stands for HAL on OpenShift. It's a special [HAL](https://hal.github.io/) edition for WildFly instances running on OpenShift.
+halOS stands for HAL on OpenShift. It is derived from [HAL](https://hal.github.io/) and allows monitoring and inspection of WildFly and other services running on OpenShift. Although the focus is on WildFly, halOS supports the monitoring of arbitrary service. This is achieved through the concept of capabilities and extensions.
 
 ## Architecture
 
@@ -8,8 +8,8 @@ halOS stands for HAL on OpenShift. It's a special [HAL](https://hal.github.io/) 
 
 halOS consists of two parts:
 
-1. [Proxy](https://github.com/hal/halos-proxy)
-2. Console (this repository)
+1. [Proxy](https://github.com/hal/halos-proxy) (back-end)
+2. Console (front-end, this repository)
 
 This repository contains the console. The console is a [RIA](https://en.wikipedia.org/wiki/Rich_web_application) / [SPA](https://en.wikipedia.org/wiki/Single-page_application) following the design guidelines from [PatternFly](https://www.patternfly.org/v4/). It uses the REST API exposed by the [proxy](https://github.com/hal/halos-proxy).
 
@@ -18,3 +18,17 @@ This repository contains the console. The console is a [RIA](https://en.wikipedi
 - [TypeScript](https://www.typescriptlang.org/)
 - [React](https://reactjs.org/)
 - [PatternFly](https://patternfly.org)
+
+## Build
+
+```shell
+npm run build
+```
+
+## Development
+
+Before starting the console in dev mode, make sure to start the [proxy](https://github.com/hal/halos-proxy) in [dev mode](https://github.com/hal/halos-proxy#development) as well. Then run the proxy in dev mode, using
+
+```shell
+npm run dev
+```
