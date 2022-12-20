@@ -19,22 +19,11 @@ import {
   Title,
 } from '@patternfly/react-core';
 import { PlusCircleIcon } from '@patternfly/react-icons';
-import { useEffect } from 'react';
-import { useLoaderData } from 'react-router';
+import { useOutletContext } from 'react-router';
 
-import {
-  ConnectionStatus,
-  ManagedService,
-  ManagedServiceModification,
-  capabilityDescription,
-  capabilityLogo,
-} from '~/model/service';
+import { ConnectionStatus, UNKNOWN_CAPABILITY, capabilityDescription, capabilityLogo } from '~/model/service';
 
-export const managedServiceLoader = async (): Promise<ManagedService[]> => {
-  const results = await fetch('/api/v1/services');
-  if (!results.ok) throw new Error('Unable to load servers!');
-  return await results.json();
-};
+import { RootState } from '../root';
 
 function connectionStatusLabel(status: ConnectionStatus) {
   switch (status) {
@@ -50,16 +39,7 @@ function connectionStatusLabel(status: ConnectionStatus) {
 }
 
 const ManagedServiceView = () => {
-  const services = useLoaderData() as ManagedService[];
-
-  useEffect(() => {
-    const eventSource = new EventSource('/api/v1/services/modifications');
-    eventSource.onmessage = (event) => {
-      const msm = event.data as ManagedServiceModification;
-      console.log(`msm: ${msm}`);
-    };
-  });
-
+  const { services } = useOutletContext<RootState>();
   return (
     <>
       <PageSection variant={PageSectionVariants.light}>
@@ -91,7 +71,10 @@ const ManagedServiceView = () => {
             </Bullseye>
           </Card>
           {services.map((service) => {
-            const capability = service.capabilities[0];
+            const capability =
+              service.capabilities != null && service.capabilities.length != 0
+                ? service.capabilities[0]
+                : UNKNOWN_CAPABILITY;
             return (
               <Card key={service.name} isCompact>
                 <CardHeader>
@@ -102,18 +85,6 @@ const ManagedServiceView = () => {
                       style={{ height: '32px', maxWidth: '60px' }}
                     />
                   </CardHeaderMain>
-                  {/*
-                  <CardActions>
-                    <Dropdown
-                      onSelect={onSelect}
-                      toggle={<KebabToggle onToggle={setIsOpen} />}
-                      isOpen={isOpen}
-                      isPlain
-                      dropdownItems={dropdownItems}
-                      position={'right'}
-                    />
-                  </CardActions>
-*/}
                 </CardHeader>
                 <CardTitle>{service.name}</CardTitle>
                 <CardBody>{capabilityDescription(capability)}</CardBody>

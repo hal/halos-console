@@ -36,6 +36,11 @@ export interface ManagedServiceModification {
   managedService: ManagedService;
 }
 
+export const UNKNOWN_CAPABILITY: Capability = {
+  name: 'unknown',
+  title: 'Unknown',
+};
+
 export function capabilityDescription(capability: Capability): string {
   switch (capability.name) {
     case 'quarkus':
