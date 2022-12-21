@@ -1,6 +1,9 @@
-import { ManagedService } from '~/model/service';
+export interface HostAndPort {
+  host: string;
+  port: number;
+}
 
-export interface QuarkusServiceType {
-  managedService: ManagedService;
-  routes: string[];
+export interface QuarkusService {
+  managedService: string;
+  routes: HostAndPort[];
 }

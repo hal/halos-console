@@ -22,6 +22,8 @@
     "@patternfly/react-core": "^4.267.6",
     "@patternfly/react-icons": "^4.92.10",
     "@patternfly/react-styles": "^4.91.10",
+    "@patternfly/react-table": "^4.112.6",
+    "luxon": "^3.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.5.0"
@@ -29,6 +31,7 @@
   "devDependencies": {
     "@html-eslint/eslint-plugin": "^0.15.0",
     "@trivago/prettier-plugin-sort-imports": "^4.0.0",
+    "@types/luxon": "^3.1.0",
     "@types/node": "^18.11.17",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",

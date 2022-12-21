@@ -123,8 +123,11 @@ const Layout: FunctionComponent<LayoutProps> = ({ children }) => {
         <NavItem key={'services'} isActive={location.pathname === 'services'}>
           <NavLink to={'services'}>Services</NavLink>
         </NavItem>
-        <NavItem key={'modelbrowser'} isActive={location.pathname == 'modelbrowser'}>
-          <NavLink to={'modelbrowser'}>Model Browser</NavLink>
+        <NavItem key={'wildfly'} isActive={location.pathname === 'wildfly/servers'}>
+          <NavLink to={'wildfly/servers'}>WildFly</NavLink>
+        </NavItem>
+        <NavItem key={'quarkus'} isActive={location.pathname === 'quarkus/services'}>
+          <NavLink to={'quarkus/services'}>Quarkus</NavLink>
         </NavItem>
       </NavList>
     </Nav>

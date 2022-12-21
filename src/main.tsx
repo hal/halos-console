@@ -5,10 +5,12 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 
 import Error from '~/routes/error';
 import Help from '~/routes/help';
-import ModelBrowser from '~/routes/modelbrowser';
 import NotYetImplemented from '~/routes/nyi';
-import ManagedServiceView from '~/routes/service';
+import QuarkusServices, { quarkusServicesLoader } from '~/routes/quarkus/services';
+import ManagedServices from '~/routes/services';
 import WelcomePage from '~/routes/welcome';
+import WildFlyServerDetail, { wildFlyServerLoader } from '~/routes/wildfly/server';
+import WildFlyServers, { wildFlyServersLoader } from '~/routes/wildfly/servers';
 import '~/styles/main.css';
 
 import { Root } from './root';
@@ -17,8 +19,10 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<Root />} path='/' errorElement={<Error />}>
       <Route path='/' element={<WelcomePage />} />
-      <Route path='services' element={<ManagedServiceView />} />
-      <Route path='modelbrowser' element={<ModelBrowser />} />
+      <Route path='services' element={<ManagedServices />} />
+      <Route path='wildfly/servers' element={<WildFlyServers />} loader={wildFlyServersLoader} />
+      <Route path='wildfly/servers/:serverName' element={<WildFlyServerDetail />} loader={wildFlyServerLoader} />
+      <Route path='quarkus/services' element={<QuarkusServices />} loader={quarkusServicesLoader} />
       <Route path='help' element={<Help />} />
       <Route path='nyi' element={<NotYetImplemented />} />
     </Route>,

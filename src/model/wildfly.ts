@@ -1,5 +1,3 @@
-import { ManagedService } from '~/model/service';
-
 export enum RunningMode {
   NORMAL = 'NORMAL',
   ADMIN_ONLY = 'ADMIN_ONLY',
@@ -34,12 +32,12 @@ export interface Deployment {
   name: string;
   status: DeploymentStatus;
   enabled: boolean;
-  disabledAt: Date;
-  enabledAt: Date;
+  disabledAt: string;
+  enabledAt: string;
 }
 
 export interface WildFlyServer {
-  managedService: ManagedService;
+  managedService: string;
   name: string;
   productName: string;
   productVersion: string;

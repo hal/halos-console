@@ -38,7 +38,7 @@ function connectionStatusLabel(status: ConnectionStatus) {
   }
 }
 
-const ManagedServiceView = () => {
+const ManagedServices = () => {
   const { services } = useOutletContext<RootState>();
   return (
     <>
@@ -106,4 +106,4 @@ const ManagedServiceView = () => {
   );
 };
 
-export default ManagedServiceView;
+export default ManagedServices;

@@ -1,6 +1,6 @@
 # halOS Console
 
-halOS stands for **HAL** on **O**pen**S**hift. It is derived from [HAL](https://hal.github.io/)  and allows monitoring and inspection of WildFly and other services running on OpenShift. Although the focus is on WildFly, halOS supports monitoring arbitrary services. This is achieved through the concept of capabilities and extensions.
+halOS stands for **HAL** on **O**pen**S**hift. It is derived from [HAL](https://hal.github.io/) and allows monitoring and inspection of WildFly and other services running on OpenShift. Although the focus is on WildFly, halOS supports monitoring arbitrary services. This is achieved through the concept of capabilities and extensions.
 
 ## Architecture
 
@@ -25,6 +25,10 @@ This repository contains the console. The console is a [RIA](https://en.wikipedi
 npm install
 npm run build
 ```
+
+## Run
+
+Please refer to the halOS [distribution](https://github.com/hal/halos-distribution#readme) about how to set up all services on OpenShift, start halOS and access the console.
 
 ## Development
 
