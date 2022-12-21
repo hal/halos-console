@@ -15,8 +15,8 @@ import {
   Tab,
   TabContent,
   TabContentBody,
-  Tabs,
   TabTitleText,
+  Tabs,
   Title,
 } from '@patternfly/react-core';
 import { ReactNode, useState } from 'react';
@@ -84,20 +84,12 @@ const WildFlyServerDetail = () => {
           <TabContentBody>
             <Flex direction={{ default: 'column' }}>
               <FlexItem spacer={{ default: 'spacerLg' }}>
-                <Title
-                  headingLevel='h2'
-                  size='lg'
-                  className='pf-u-mt-sm'
-                  id='wildfly-server-details'
-                >
+                <Title headingLevel='h2' size='lg' className='pf-u-mt-sm' id='wildfly-server-details'>
                   WildFly server details
                 </Title>
               </FlexItem>
               <FlexItem>
-                <DescriptionList
-                  columnModifier={{ lg: '2Col' }}
-                  aria-labelledby='wildfly-server-details'
-                >
+                <DescriptionList columnModifier={{ lg: '2Col' }} aria-labelledby='wildfly-server-details'>
                   {description(
                     'desc-name',
                     'Name',
