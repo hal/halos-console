@@ -53,10 +53,9 @@ const WildFlyServerDetail = () => {
   const handleTabClick = (tabIndex: number) => setActiveTabKey(tabIndex);
 
   useEffect(() => {
-    fetchStatus().then((newStatus) => setStatus(() => newStatus));
     const interval = setInterval(() => {
       fetchStatus().then((newStatus) => setStatus(() => newStatus));
-    }, 5000);
+    }, 1000);
     return () => clearInterval(interval);
   });
 
