@@ -22,7 +22,7 @@
     "@patternfly/react-charts": "^6.94.15",
     "@patternfly/react-core": "^4.267.6",
     "@patternfly/react-icons": "^4.92.10",
-    "@patternfly/react-styles": "^4.91.10",
+    "@patternfly/react-styles": "^4.92.6",
     "@patternfly/react-table": "^4.112.6",
     "luxon": "^3.2.1",
     "react": "^18.2.0",
