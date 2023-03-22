@@ -30,7 +30,7 @@
     "react-router-dom": "^6.9.0"
   },
   "devDependencies": {
-    "@html-eslint/eslint-plugin": "^0.17.1",
+    "@html-eslint/eslint-plugin": "^0.17.2",
     "@trivago/prettier-plugin-sort-imports": "^4.1.1",
     "@types/luxon": "^3.2.0",
     "@types/node": "^18.15.5",
